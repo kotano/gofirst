@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "GoFirst",
+  "description": "Redirects to the first search result when holding the Enter key",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
